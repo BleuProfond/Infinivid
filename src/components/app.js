@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        Infinivid
+        {this.props.children}
       </div>
     );
   }
