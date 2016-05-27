@@ -1,15 +1,28 @@
-import React from 'react';
-
+import React, { Component } from 'react';
+import YTSearch from 'youtube-api-search';
 import SearchBar from './video/search_bar';
+import VideoList from './video/video_list';
+const API_KEY = 'AIzaSyDjrqWh_vwxuTxpZ62RrRDHtpytqr-LKno';
 
-const API_KEY = 'AIzaSyB5RXIUt7J-LCLj7IKZJVTjJEIQ-5A0GQ4';
+class VideoApp extends Component {
+  constructor(props) {
+    super(props);
 
-const VideoApp = () => {
-  return (
-    <div>
-      <SearchBar />
-    </div>
-  );
+    this.state = { videos: [] };
+
+    YTSearch({key: API_KEY, term: 'Conan'}, (videos) => {
+      this.setState({ videos });
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <SearchBar />
+        <VideoList videos={this.state.videos} />
+      </div>
+    );
+  } 
 }
 
 export default VideoApp;
