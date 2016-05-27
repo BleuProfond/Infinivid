@@ -11,7 +11,7 @@ import Signout from './components/auth/signout';
 import Signup from './components/auth/signup';
 import Feature from './components/feature';
 import RequireAuth from './components/auth/require_auth';
-import Welcome from './components/welcome';
+import VideoApp from './components/video_app';
 import reducers from './reducers';
 import { AUTH_USER } from './actions/types';
 
@@ -29,7 +29,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory} >
       <Route path="/" component={App}>
-        <IndexRoute component={Welcome}/>
+        <IndexRoute component={VideoApp} />
         <Route path="signin" component={Signin} />
         <Route path="signout" component={Signout} />
         <Route path="signup" component={Signup} />
