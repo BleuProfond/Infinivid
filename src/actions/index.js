@@ -1,13 +1,15 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
+import YTSearch from 'youtube-api-search';
 import { 
   AUTH_USER,
   UNAUTH_USER,
   AUTH_ERROR,
-  FETCH_MESSAGE 
+  FETCH_MESSAGE, 
 } from './types';
 
 const ROOT_URL = 'http://localhost:3090';
+const API_KEY = 'AIzaSyDjrqWh_vwxuTxpZ62RrRDHtpytqr-LKno';
 
 export function signinUser({ email, password }) {
   return function(dispatch) {
@@ -68,3 +70,11 @@ export function fetchMessage() {
       });
   }
 }
+
+// export function videoSearch(term) {
+//   return function(dispatch) {
+//     YTSearch({key: API_KEY, term: term}, (videos) => {
+
+//     });
+//   }
+// }
