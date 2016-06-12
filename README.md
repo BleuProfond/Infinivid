@@ -12,7 +12,7 @@ $ mongod
 
 3. Open a new terminal window and type the following command
 >
-git clone https://github.com/BleuProfond/authorization_module_skeleton.git 
+$ git clone https://github.com/BleuProfond/authorization_module_skeleton.git 
 
 4. cd into the root folder and type the following commands
 >
