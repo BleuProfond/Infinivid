@@ -34,4 +34,4 @@ $ npm start
 
 7. Visit [localhost:8080](https://localhost:8080)
 
-[Link to the back-end API](https://github.com/BleuProfond/authorization_module_skeleton)
+[Link to the back-end API repository.](https://github.com/BleuProfond/authorization_module_skeleton)
