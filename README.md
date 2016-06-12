@@ -4,7 +4,7 @@ A work in progress YouTube clone that uses a MERN stack (MongoDB, Express, React
 
 ###Installation Guide
 
-1. You will need MongoDB, Git and Node to install this development version. 
+1. You will need [MongoDB](https://www.mongodb.com/download-center#community), [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Node](https://nodejs.org/en/) to install this development version. 
 
 2. On your terminal start your MongoDB server by typing
 >
