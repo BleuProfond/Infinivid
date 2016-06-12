@@ -20,7 +20,6 @@ $ cd server
 >
 $ npm install
 >
-
 $ npm run dev
 
 5. In a new terminal window type the following commands
