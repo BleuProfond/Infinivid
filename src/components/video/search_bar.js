@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { videoSearch } from '../../actions/index';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -10,7 +13,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="search-bar">
-        <input 
+        <input
           value={this.state.term}
           onChange={event => this.onInputChange(event.target.value)} />
       </div>

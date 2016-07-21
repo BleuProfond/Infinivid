@@ -5,7 +5,7 @@ import {
   FETCH_MESSAGE
 } from '../actions/types';
 
-export default function(state = {}, action) {
+export default (state = {}, action) => {
   switch(action.type) {
     case AUTH_USER:
       return { ...state, error: '', authenticated: true };
@@ -14,7 +14,7 @@ export default function(state = {}, action) {
     case AUTH_ERROR:
       return { ...state, error: action.payload };
     case FETCH_MESSAGE:
-      return { ...state, message: action.payload }; 
+      return { ...state, message: action.payload };
   }
 
   return state;

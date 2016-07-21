@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 import YTSearch from 'youtube-api-search';
-import { 
+import {
   AUTH_USER,
   UNAUTH_USER,
   AUTH_ERROR,
-  FETCH_MESSAGE, 
+  FETCH_MESSAGE,
+  VIDEO_SEARCH
 } from './types';
 
 const ROOT_URL = 'http://localhost:3090';
@@ -21,8 +22,8 @@ export function signinUser({ email, password }) {
         dispatch({ type: AUTH_USER });
         // - Save the JWT token
         localStorage.setItem('token', response.data.token);
-        // - redirect to the route '/feature' 
-        browserHistory.push('/feature');       
+        // - redirect to the route '/feature'
+        browserHistory.push('/feature');
       })
       .catch(() => {
         // If request is invalid...
@@ -53,7 +54,7 @@ export function authError(error) {
 
 export function signoutUser() {
   localStorage.removeItem('token');
-  
+
   return { type: UNAUTH_USER };
 }
 
@@ -71,10 +72,14 @@ export function fetchMessage() {
   }
 }
 
-// export function videoSearch(term) {
-//   return function(dispatch) {
-//     YTSearch({key: API_KEY, term: term}, (videos) => {
-
-//     });
-//   }
-// }
+export function videoSearch() {
+  return function(dispatch) {
+    YTSearch({key: API_KEY, term: term})
+      .then(videos => {
+        dispatch({
+          type: VIDEO_SEARCH,
+          payload: videos
+        });
+      });
+  }
+}
