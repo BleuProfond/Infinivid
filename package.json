@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BleuProfond/infinivid.git"
+    "url": "git+https://github.com/PierreDV/infinivid.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BleuProfond/infinivid/issues"
+    "url": "https://github.com/PierreDV/infinivid/issues"
   },
-  "homepage": "https://github.com/BleuProfond/infinivid#readme",
+  "homepage": "https://github.com/PierreDV/infinivid#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.9.0",
